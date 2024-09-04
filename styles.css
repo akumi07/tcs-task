@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #f0f0f0; */
+}
+
+.navbar-left .home-icon {
+    font-size: 24px;
+    color: blue;
+    text-decoration: none;
+}
+
+.navbar-right .btn {
+    padding: 10px 20px;
+    border: 2px solid green;
+    background-color: white;
+    color: green;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.navbar-right .btn:hover {
+    background-color: #e6ffe6;
+}
+
+.bank-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    margin-top: 20px;
+}
+
+.bank-content {
+    max-width: 60%;
+}
+
+.bank-heading {
+    margin-left: 45%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.bank-paragraph {
+    margin-top: 10px;
+    line-height: 1.6;
+    margin-left: 20%;
+}
+
+/* Random indentation for each line */
+.line-1 {
+    margin-left: 50px;
+}
+.line-2 {
+    margin-left: 30px;
+}
+.line-3 {
+    margin-left: 15px;
+}
+.line-4 {
+    margin-left: 35px;
+}
+.line-5 {
+    margin-left: 25px;
+}
+.line-6 {
+    margin-left: 10px;
+}
+.line-7 {
+    margin-left: 30px;
+}
+.line-8 {
+    margin-left: 50px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.image-item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey; /* Adds a grey border below the image */
+    margin: 0 40px; 
+
+}
+.image-item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey; /* Adds a grey border below the image */
+    margin: 0 40px; 
+
+}
+.image-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey; /* Adds a grey border below the image */
+    margin: 0 40px; 
+
+}
+
+.bank-image {
+    width: 100%; /* Set image size to 50% of its original size */
+    margin-right: 125px;
+    margin-top: 15px;
+    max-width: 350px;
+    margin-left: 5px; /* Add margin to ensure space between text and image */
+    /* border: 2px solid grey; Adds a grey border below the image */
+}
+.bank-image2{
+    width: 40%; /* Set image size to 50% of its original size */
+    margin-right: 125px;
+    margin-top: 15px;
+    max-width: 350px;
+    margin-left: 125px; /* Add margin to ensure space between text and image */
+    
+}
+
+.account-type {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.gallery-btn {
+    padding: 10px 20px;
+    border: 2px solid rgb(133, 191, 211);
+    background-color: rgb(133, 191, 211);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.gallery-btn:hover {
+    background-color: black;
+}
+/* Existing styles here */
+
+.footer {
+    background-color: rgb(235, 155, 52);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+

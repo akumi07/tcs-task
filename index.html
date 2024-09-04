@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Bank Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function openRegistrationForm() {
+            window.location.href = 'create_account.html'; // Replace with the correct path to your registration form file
+        }
+        function openLoginPage() {
+            window.location.href = 'login.html'; // Replace with the correct path to your registration form file
+        }
+        </script>
+        
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="home-icon">🏠</a>
+        </div>
+        <div class="navbar-right">
+            <button class="btn login-btn" onclick="openLoginPage()">Login</button>
+            <button class="btn register-btn" onclick="openRegistrationForm()">Register</button>
+
+        </div>
+    </nav>
+
+    <div class="bank-section">
+        <div class="bank-content">
+            <h1 class="bank-heading">TCS BANK</h1>
+            <p class="bank-paragraph">
+                <span class="line-1">The central practice of banking consists of borrowing and lending.</span>
+                <br>
+                <span class="line-2">As in other businesses, operations must be based on capital, but banks employ comparatively little of their own capital in relation to the total volume of their transactions.</span>
+                <span class="line-3">Instead banks use the funds obtained through deposits and, as a precaution, maintain capital and reserve accounts to protect against losses on their loans and investments and to provide for unanticipated cash withdrawals.</span>
+                <br>
+                <span class="line-4">Genuine banks are distinguished from other kinds of financial intermediaries by the readily transferable or "spendable" nature of at least some of their liabilities (also known as IOUs),</span>
+                <span class="line-5">which allows those liabilities to serve as means of exchange—that is, as money.</span>
+            </p>
+        </div>
+        <img src="bank-image.jpg" alt="Bank" class="bank-image">
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-item1">
+            <img src="bank-image.jpg" alt="Bank 1" class="bank-image2">
+            <p class="account-type"><strong>Saving Account</strong></p>
+            <button class="btn gallery-btn">Saving Account</button>
+        </div>
+        <div class="image-item2">
+            <img src="bank-image.jpg" alt="Bank 2" class="bank-image2">
+            <p class="account-type"><strong>Current Account</strong> </p>
+            <button class="btn gallery-btn">Current Account</button>
+        </div>
+        <div class="image-item3">
+            <img src="bank-image.jpg" alt="Bank 3" class="bank-image2">
+            <p class="account-type"><strong>Salary Account</strong></p>
+            <button class="btn gallery-btn">Salary Account</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Author: TCS Bank</p>
+        <p>Contact: tcs@gmail.com</p>
+    </footer>
+    
+</body>
+</html>
