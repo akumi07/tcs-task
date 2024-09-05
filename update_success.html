@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Successful</title>
+    <link rel="stylesheet" href="update_success.css">
+</head>
+<body>
+    <div class="success-container">
+        <h1>Update Successful</h1>
+        <p>Customer Name: <span id="customerName"></span></p>
+        <p>Account Number: <span id="accountNumber"></span></p>
+        <p>Your details have been successfully updated!</p>
+        <a href="bank_menu.html">
+            <button class="btn">OK</button>
+        </a>
+    </div>
+
+    <script>
+        // Retrieve the customer data from localStorage
+        const loggedCustomerData = JSON.parse(localStorage.getItem('user'));
+        if (!loggedCustomerData) {
+            alert('No customer data found!');
+            window.location.href = 'login.html'; // Redirect to login if no customer data is found
+        } else {
+            // Display the customer's name and account number (Customer ID)
+            document.getElementById('customerName').textContent = loggedCustomerData.firstName + ' ' + loggedCustomerData.lastName;
+            document.getElementById('accountNumber').textContent = loggedCustomerData.customerId;
+        }
+    </script>
+</body>
+</html>

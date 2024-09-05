@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Successful</title>
+    <link rel="stylesheet" href="deposit_success.css">
+</head>
+<body>
+    <div class="success-container">
+        <h1>Deposit Successful</h1>
+        <p>Account Number: <span id="accountNumber"></span></p>
+        <p>Updated Balance: ₹<span id="updatedBalance"></span></p>
+        <a href="bank_menu.html">
+            <button class="btn">OK</button>
+        </a>
+    </div>
+
+    <script>
+        // Retrieve login and deposit data from localStorage
+        const currentCustomerId = localStorage.getItem('customerId');
+        const updatedBalance = localStorage.getItem('accountBalance');
+
+        // Display the customer account number (customer ID) and updated balance
+        document.getElementById('accountNumber').textContent = currentCustomerId;
+        document.getElementById('updatedBalance').textContent = updatedBalance ? updatedBalance : 0;
+    </script>
+</body>
+</html>

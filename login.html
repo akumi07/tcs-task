@@ -24,24 +24,29 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
-
+    
             // Get values from the form
             const accountNumber = document.getElementById('accountNumber').value;
             const password = document.getElementById('password').value;
-
+    
             // Retrieve user data from localStorage
-            const storedAccountNumber = localStorage.getItem('customer_id');
-            const storedPassword = localStorage.getItem('password');
-
+            const storedUser = JSON.parse(localStorage.getItem('user')); // Parse the stored object
+            const storedAccountNumber = storedUser ? storedUser.customerId : null;
+            const storedPassword = storedUser ? storedUser.password : null;
+    
+            console.log('Stored Account Number:', storedAccountNumber);
+            console.log('Stored Password:', storedPassword);
+    
             // Validate the login credentials
             if (accountNumber === storedAccountNumber && password === storedPassword) {
                 alert('Login Successful');
                 // Redirect to home page or dashboard
-                window.location.href = 'index.html';
+                window.location.href = 'bank_menu.html';
             } else {
                 alert('Invalid Account Number or Password');
             }
         });
     </script>
+    
 </body>
 </html>

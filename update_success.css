@@ -1,0 +1,50 @@
+/* Styling for the update_success.html page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.success-container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #e6ffe6; /* Light green background for success */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #4CAF50; /* Green border */
+}
+
+.success-container h1 {
+    color: #4CAF50; /* Green color for success message */
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.success-container p {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.success-container .btn {
+    padding: 12px 25px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.success-container .btn:hover {
+    background-color: darkgreen;
+}
+
+.success-container span {
+    font-weight: bold;
+    color: #333;
+}

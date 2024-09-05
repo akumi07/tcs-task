@@ -1,0 +1,53 @@
+/* Deposit Success Page specific styles */
+.success-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f0fff0; /* Light green background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    text-align: left;
+    position: relative;
+}
+
+.success-container h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.success-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.success-container #accountNumber {
+    color: #0000ff; /* Blue color for Account Number */
+}
+
+.success-container #updatedBalance {
+    color: #4CAF50; /* Green color for updated balance */
+}
+
+.success-container .btn {
+    width: 100px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.success-container .btn:hover {
+    background-color: darkgreen;
+}

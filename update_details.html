@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Details</title>
+    <link rel="stylesheet" href="update_details.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Update</h2>
+        <form id="updateForm">
+            <label for="ssn">SSN ID:</label>
+            <input type="text" id="ssn" disabled>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="accountNo">Account No:</label>
+            <input type="text" id="accountNo" disabled>
+
+            <label for="ifsc">IFSC Code:</label>
+            <input type="text" id="ifsc" required>
+
+            <label for="aadhaar">Aadhar No:</label>
+            <input type="text" id="aadhaar" required>
+
+            <label for="pan">Pan No:</label>
+            <input type="text" id="pan" required>
+
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" required>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="gender-male" name="gender" value="Male"> Male
+            <input type="radio" id="gender-female" name="gender" value="Female"> Female
+
+            <label for="maritalStatus">Marital Status:</label>
+            <select id="maritalStatus" required>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="contactNo">Contact No:</label>
+            <input type="text" id="contactNo" required>
+
+            <button type="submit" class="btn">Update</button>
+        </form>
+    </div>
+
+    <script src="update_details.js"></script>
+</body>
+</html>

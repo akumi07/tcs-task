@@ -1,0 +1,64 @@
+/* Deposit Amount specific styles */
+.deposit-container {
+    max-width: 600px; /* Increase width to match the image */
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f0fff0; /* Light green background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    border: 1px solid #ccc; /* Light border */
+    text-align: left; /* Align text to left */
+    position: relative;
+}
+
+.deposit-container h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: -30px; /* Move title out of the box */
+    left: 20px;
+    background-color: white; /* White background for title */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.deposit-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0000ff; /* Blue color for Account Number */
+}
+
+.deposit-container label {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.deposit-container input[type="number"] {
+    width: 60%;
+    padding: 8px;
+    margin-left: 20px; /* Space between label and input */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.deposit-container .btn {
+    width: 120px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.deposit-container .btn:hover {
+    background-color: darkgreen;
+}
