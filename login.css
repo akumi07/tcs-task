@@ -2,7 +2,7 @@
 .login-container {
     width: 300px;
     margin: 100px auto;
-    padding: 20px;
+    padding: 20px; /* Padding around the container */
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
@@ -22,11 +22,12 @@
 
 .login-container input[type="text"],
 .login-container input[type="password"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Full width minus padding for inner gap */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 .login-container .btn {
