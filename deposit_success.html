@@ -17,13 +17,22 @@
     </div>
 
     <script>
-        // Retrieve login and deposit data from localStorage
-        const currentCustomerId = localStorage.getItem('customerId');
-        const updatedBalance = localStorage.getItem('accountBalance');
+        // Retrieve user data from localStorage
+        const userData = JSON.parse(localStorage.getItem('user'));
 
-        // Display the customer account number (customer ID) and updated balance
-        document.getElementById('accountNumber').textContent = currentCustomerId;
-        document.getElementById('updatedBalance').textContent = updatedBalance ? updatedBalance : 0;
+        // Check if user data exists
+        if (userData) {
+            const currentCustomerId = userData.customerId || 'Unknown';
+            const updatedBalance = userData.accountBalance || 0;
+
+            // Display the customer account number and updated balance
+            document.getElementById('accountNumber').textContent = currentCustomerId;
+            document.getElementById('updatedBalance').textContent = updatedBalance.toFixed(2); // Display with 2 decimal places
+        } else {
+            // Handle the case where user data is not found (optional)
+            document.getElementById('accountNumber').textContent = 'Unknown';
+            document.getElementById('updatedBalance').textContent = '0.00';
+        }
     </script>
 </body>
 </html>

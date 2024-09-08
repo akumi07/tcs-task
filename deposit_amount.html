@@ -14,7 +14,7 @@
 
         <form id="depositForm">
             <label for="depositAmount">Amount to Deposit:</label>
-            <input type="number" id="depositAmount" required min="0">
+            <input type="number" id="depositAmount" required min="0" step="0.01" placeholder="Enter amount">
 
             <button type="submit" class="btn">Deposit</button>
         </form>
@@ -23,8 +23,8 @@
     <script>
         // Get customer data from localStorage
         const userData = JSON.parse(localStorage.getItem('user'));
-        const accountNumber = userData.customerId;
-        let currentBalance = parseFloat(userData.accountBalance || 0); // Default to 0 if not set
+        const accountNumber = userData?.customerId || "Unknown";
+        let currentBalance = parseFloat(userData?.accountBalance || 0); // Default to 0 if not set
 
         // Display the logged-in account number
         document.getElementById('accountNumber').textContent = accountNumber;
@@ -37,21 +37,20 @@
             const depositAmount = parseFloat(document.getElementById('depositAmount').value);
 
             // Validate the amount
-            if (depositAmount < 0) {
-                alert('Deposit amount cannot be negative.');
+            if (isNaN(depositAmount) || depositAmount <= 0) {
+                alert('Please enter a valid deposit amount greater than 0.');
                 return;
             }
 
-            // Update the account balance
-            currentBalance += depositAmount;
+            // Update the account balance (rounded to 2 decimal places)
+            currentBalance = Math.round((currentBalance + depositAmount) * 100) / 100;
             userData.accountBalance = currentBalance;
 
             // Update localStorage with the new balance
             localStorage.setItem('user', JSON.stringify(userData));
 
-            // Show success message and redirect back to the bank menu
-            alert('Amount deposited successfully! Current Balance: ' + currentBalance);
-            window.location.href = 'deposit_success.html'; // Redirect to bank menu
+            // Redirect to the success page without showing an alert
+            window.location.href = 'deposit_success.html';
         });
     </script>
 </body>

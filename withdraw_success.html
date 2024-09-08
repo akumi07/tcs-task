@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Successful</title>
+    <link rel="stylesheet" href="withdraw_success.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="success-container">
+        <h1>Withdrawal Successful</h1>
+        <p>Customer Account ID: <span id="accountNumber"></span></p>
+        <p>Updated Balance: ₹<span id="updatedBalance"></span></p>
+        <button class="btn" onclick="goToMenu()">OK</button>
+    </div>
+
+    <script>
+        // Retrieve account number and updated balance from localStorage
+        const userData = JSON.parse(localStorage.getItem('user'));
+        const accountNumber = userData?.customerId || "Unknown";
+        const updatedBalance = userData?.accountBalance || 0;
+
+        // Display the account number and updated balance
+        document.getElementById('accountNumber').textContent = accountNumber;
+        document.getElementById('updatedBalance').textContent = updatedBalance;
+
+        // Function to handle the OK button click
+        function goToMenu() {
+            // Redirect to the bank menu page
+            window.location.href = 'bank_menu.html'; // Redirect to bank_menu.html
+        }
+    </script>
+</body>
+</html>

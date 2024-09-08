@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITHDRAW</title>
+    <link rel="stylesheet" href="withdraw.css">
+</head>
+<body>
+    <div class="withdraw-container">
+        <h1>Withdraw Amount</h1>
+        <p>Account Number: <span id="accountNumber"></span></p>
+
+        <form id="withdrawForm">
+            <label for="withdrawAmount">Enter Withdraw Amount:</label>
+            <input type="number" id="withdrawAmount" required>
+            <p class="min-balance-warning">Min. Balance Should be ₹500.</p>
+            <button type="submit" class="btn">Withdraw</button>
+        </form>
+    </div>
+
+    <script>
+        // Get the customer ID from localStorage and show in the Account Number field
+       // Get the customer ID from localStorage and show in the Account Number field
+const userData = JSON.parse(localStorage.getItem('user'));
+const accountNumber = userData?.customerId || "Unknown";
+
+document.getElementById('accountNumber').textContent = accountNumber;
+
+// Add event listener to the form
+document.getElementById('withdrawForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Retrieve the current balance from localStorage
+    let currentBalance = parseFloat(userData?.accountBalance || 0); // Default to 0 if not set
+
+    // Get the withdraw amount entered by the user
+    const withdrawAmount = parseFloat(document.getElementById('withdrawAmount').value);
+
+    // Check if the withdraw amount is valid (not negative and a valid number)
+    if (withdrawAmount < 0 || isNaN(withdrawAmount)) {
+        alert("Please enter a valid amount.");
+        return;
+    }
+
+    // Check if the balance would drop below ₹500 after the withdrawal
+    if (currentBalance - withdrawAmount < 500) {
+        alert("Minimum balance should be ₹500. Cannot proceed with this withdrawal.");
+        return;
+    }
+
+    // Update the balance by subtracting the withdraw amount
+    const updatedBalance = currentBalance - withdrawAmount;
+
+    // Store the updated balance in localStorage
+    userData.accountBalance = updatedBalance; // Update the balance with the new value
+    localStorage.setItem('user', JSON.stringify(userData));
+
+    // Redirect to a success page
+    window.location.href = `withdraw_success.html`;
+});
+
+    </script>
+</body>
+</html>

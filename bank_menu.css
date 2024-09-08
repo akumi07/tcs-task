@@ -10,37 +10,74 @@ body {
 
 .menu-container {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px 20px; /* More padding on top to separate buttons and heading */
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f0fff0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Increased width to accommodate buttons */
+    position: relative;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin: 0;
+    padding: 5px 15px;
+    font-size: 20px;
     background-color: #dfe8f2;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
     color: #333;
     border: 1px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .btn {
     display: block;
-    width: 200px;
+    width: 200px; /* Button width adjusted to fit in the container */
     padding: 10px;
-    margin: 10px auto;
-    background-color: green;
+    margin: 15px auto; /* More margin to separate buttons */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
 }
 
 .btn:hover {
-    background-color: darkgreen;
+    background-color: #218838;
 }
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    background-color: #575757;
+    transition: background-color 0.3s;
+}
+
+.logout {
+    margin-right: 20px; /* Adds margin to the right of the Logout button */
+}
+
